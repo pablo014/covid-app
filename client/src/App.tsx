@@ -2,13 +2,15 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import EditableTextBar from './components/EditableTextBar.tsx';
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <div class="flex items-center justify-center">
+      <div className="flex items-center justify-center">
+          <EditableTextBar />
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
@@ -16,7 +18,7 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1 class="font-extrabold text-4xl">Vite + React</h1>
+      <h1 className="font-extrabold text-4xl">Vite + React</h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
